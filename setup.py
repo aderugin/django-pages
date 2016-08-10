@@ -5,7 +5,7 @@ setup(
     version='0.1a',
     author='Derugin Anton',
     author_email='anton.derugin@gmail.com',
-    packages=['pages'],
+    packages=['pages', 'pages/migrations'],
     install_requires=[
         'django-helpers'
     ],
