@@ -54,11 +54,7 @@ class PageMixin(six.with_metaclass(PageMixinMetaclass)):
 
     def get_context_data(self, **kwargs):
         context = super(PageMixin, self).get_context_data(**kwargs)
-        context.update({
-            'page': self.page
-        })
+        context['page'] = self.page
         if not isinstance(self, DetailView):
-            context.update({
-                'object': self.page
-            })
+            context['object'] = self.page
         return context
